@@ -1,0 +1,214 @@
+body{
+    margin:0px;
+    padding: 0px;
+    color: white;
+}
+
+div{
+    padding: 0px;
+    margin: 0px;
+}
+
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+p{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* ##################### HEADER ######################   */
+.header{
+    height: 200px;
+    width:auto;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+
+
+/* ##################### Content ######################   */
+.container{
+    background-color: #2c2c2c;
+    padding-top:20px;
+    padding-bottom: 20px; 
+    width: auto;
+    height: auto;
+}
+.taskTracking{
+    background-color: #171717;
+    height: 140px;
+    width: auto;
+    margin: 0px 15px 20px 15px;
+    display: block;
+}
+
+.taskTracking p{
+    margin: 10px;
+    font-size:32px;
+}
+
+.activeTasks{
+    display: inline-block;
+    float: left;
+    background-color: black;
+    margin:20px 80px 20px 20px;
+    height:100px;
+    width: 23%;
+}
+
+.tasksDone{
+    display: inline-block;
+    float: left;
+    background-color: black;
+    margin:20px 80px 20px 80px;
+    height:100px;
+    width: 23%;
+
+}
+
+.criticalTasks{
+    display: inline-block;
+    float: left;
+    background-color: black;
+    margin:20px 20px 20px 80px;
+    height:100px;
+    width: 24%;
+
+}
+
+.taskDetails{
+    display: block;
+    overflow: auto;
+    background-color: #171717;
+    height: auto;
+    width: auto;
+    margin: 20px 15px 0px 20px;
+    font-size:20px;
+    text-transform: uppercase;
+}
+
+
+.taskDetails a{
+    text-decoration: none;
+    height: auto;
+    width: 50%;
+    background-color: #01013e;
+    display: inline-block;
+    float: left;
+    padding-top:2px;
+    padding-bottom: 5px;
+
+}
+
+.taskDetails a:hover{
+    background-color: #0e0e62;
+}
+
+
+/* ##################### Content-task ######################   */
+.task{
+    background-color: black;
+    height: auto;
+    width: calc(100% - 40px);
+    display: block;
+    float:left;
+    margin:10px;
+    padding: 10px;
+}
+
+.leftTaskPanel{
+    display: inline-block;
+    width: 60%;
+    float:left;
+}
+
+.progressBar{
+    display: inline-block;
+    background-color: white;
+    margin-top:10px;
+    height: 20px;
+    width: 80%;
+}
+
+
+.filledProgressBar{
+    width: 50%;
+    height: 20px;
+    display: inline-block;
+    float: left;
+    background-color:greenyellow;
+}
+
+.progress{
+    display: inline-block;
+    margin-left: 10px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.timeBar{
+    display: inline-block;
+    background-color:white;
+    margin-top:10px;
+    height: 15px;
+    width: 70%;
+}
+
+.filledTimeBar{
+    width:50%;
+    height: 15px;
+    display:inline-block;
+    float:left;
+    background-color:red;
+}
+
+.timeleft{
+    display: inline-block;
+    margin-left:10px;
+    font-size:15px;
+    text-transform: lowercase;
+}
+
+.done-btn{
+    font-size: 15px;
+    color:black;
+    float:right !important;
+    background-color: #b2e551 !important;
+    border-radius: 50%;        
+    display: inline-block !important;
+    height: 80px !important;
+    width: 80px !important;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;  /* horizontal align */
+    line-height: 80px;  /* vertical align */
+
+}
+
+/* ##################### FOOTER ######################   */
+
+.footer{
+    height: 200px;
+    width:auto;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+blue{
+    color: blue;
+}
+
+green{
+    color:greenyellow;
+}
+
+red{
+    color:red;
+}

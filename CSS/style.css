@@ -1,4 +1,16 @@
+@font-face {
+    font-family: BerlinSansFBDemiBold;
+    src: url(../Fonts/BerlinSansFBDemiBold.ttf);
+}
+
+:root {
+    --red:#e64242;
+    --blue:#6e6ef8;
+    --green:#a8e647;
+}
+
 body{
+    font-family: BerlinSansFBDemiBold;
     margin:0px;
     padding: 0px;
     color: white;
@@ -57,18 +69,18 @@ p{
     display: inline-block;
     float: left;
     background-color: black;
-    margin:20px 80px 20px 20px;
+    margin:20px 0px 20px 8%;
     height:100px;
-    width: 23%;
+    width: 22.66%;
 }
 
 .tasksDone{
     display: inline-block;
     float: left;
     background-color: black;
-    margin:20px 80px 20px 80px;
+    margin:20px 0px 20px 8%;
     height:100px;
-    width: 23%;
+    width: 22.66%;
 
 }
 
@@ -76,9 +88,9 @@ p{
     display: inline-block;
     float: left;
     background-color: black;
-    margin:20px 20px 20px 80px;
+    margin:20px 0px 20px 8%;
     height:100px;
-    width: 24%;
+    width: 22.66%;
 
 }
 
@@ -94,22 +106,30 @@ p{
 }
 
 
-.taskDetails a{
+.topMenuBtn{
     text-decoration: none;
     height: auto;
-    width: 50%;
+    width: calc(50% - 1px);
     background-color: #01013e;
     display: inline-block;
     float: left;
     padding-top:2px;
     padding-bottom: 5px;
-
 }
 
-.taskDetails a:hover{
+
+.topMenuBtn:hover{
     background-color: #0e0e62;
+    cursor: pointer;
 }
 
+.topMenuBtn:active{
+    background-color: #0b0b4a;
+}
+
+.topMenuBtnFocused-js{
+     background-color: #0b0b4a;
+}
 
 /* ##################### Content-task ######################   */
 .task{
@@ -142,7 +162,7 @@ p{
     height: 20px;
     display: inline-block;
     float: left;
-    background-color:greenyellow;
+    background-color:var(--green);
 }
 
 .progress{
@@ -165,7 +185,7 @@ p{
     height: 15px;
     display:inline-block;
     float:left;
-    background-color:red;
+    background-color:var(--red);
 }
 
 .timeleft{
@@ -178,17 +198,26 @@ p{
 .done-btn{
     font-size: 15px;
     color:black;
-    float:right !important;
-    background-color: #b2e551 !important;
+    float:right ;
+    background-color: #b2e551;
     border-radius: 50%;        
-    display: inline-block !important;
-    height: 80px !important;
-    width: 80px !important;
+    display: inline-block ;
+    height: 80px ;
+    width: 80px ;
     margin: 0px;
     padding: 0px;
     text-align: center;  /* horizontal align */
     line-height: 80px;  /* vertical align */
 
+}
+.done-btn:hover{
+    background-color: #8eb447;
+    cursor: pointer;
+}
+
+.done-btn:active{
+    background-color: #809f47;
+    cursor: pointer;
 }
 
 /* ##################### FOOTER ######################   */
@@ -202,13 +231,13 @@ p{
 }
 
 blue{
-    color: blue;
+    color: var(--blue);
 }
 
 green{
-    color:greenyellow;
+    color:var(--green);
 }
 
 red{
-    color:red;
+    color:var(--red);
 }

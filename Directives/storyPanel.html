@@ -1,0 +1,17 @@
+<div class="story" ng-repeat="story in user.story">
+    <div class="leftStoryPanel">
+        <p>{{story.name}}</p>
+        <div class="progressBar">
+            <div class="filledProgressBar"></div>
+        </div>
+        <p class="progress"><green>100%</green></p>
+        <div class="timeBar">
+            <div class="filledTimeBar"></div>
+        </div>
+        <p class="timeLeft"><red>{{showRemaingingDays()}}</red></p>
+    </div>
+
+    <div class="rightStoryPanel">
+        <a class="done-btn">Done</a>
+    </div>
+</div>

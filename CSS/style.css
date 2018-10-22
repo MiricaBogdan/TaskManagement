@@ -132,7 +132,7 @@ p{
 }
 
 /* ##################### Content-task ######################   */
-.task{
+.story{
     background-color: black;
     height: auto;
     width: calc(100% - 40px);
@@ -142,7 +142,7 @@ p{
     padding: 10px;
 }
 
-.leftTaskPanel{
+.leftStoryPanel{
     display: inline-block;
     width: 60%;
     float:left;

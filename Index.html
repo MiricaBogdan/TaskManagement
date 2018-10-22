@@ -2,15 +2,18 @@
     <head>
         <title>TimeManagementApp</title>
         <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <script src="External/angular/angular.min.js"></script>
         <script src="JS/main.js"></script>
     </head>
 
-    <body>
+    <body ng-app="timeManagementApp" ng-controller="myCtrl">
         <header>
-            <div class="header"></div>
+            <div class="header">
+            </div>
         </header>
-
+ 
         <content>
+   
             <div class="container">
                 <div class="taskTracking">
                     <div class="activeTasks">
@@ -43,91 +46,8 @@
                         </ul>
                     </div>
 
-                    <div class="task">
-                        <div class="leftTaskPanel">
-                            <p>Task name</p>
-                            <div class="progressBar">
-                                <div class="filledProgressBar"></div>
-                            </div>
-                            <p class="progress"><green>100%</green></p>
-                            <div class="timeBar">
-                                <div class="filledTimeBar"></div>
-                            </div>
-                            <p class="timeLeft"><red>1 day</red></p>
-                        </div>
-                        
-                        <div class="rightTaskPanel">
-                            <a class="done-btn">Done</a>
-                        </div>
-                    </div>
-                    <div class="task">
-                        <div class="leftTaskPanel">
-                            <p>Task name</p>
-                            <div class="progressBar">
-                                <div class="filledProgressBar"></div>
-                            </div>
-                            <p class="progress"><green>100%</green></p>
-                            <div class="timeBar">
-                                <div class="filledTimeBar"></div>
-                            </div>
-                            <p class="timeLeft"><red>1 day</red></p>
-                        </div>
-                        
-                        <div class="rightTaskPanel">
-                            <a class="done-btn">Done</a>
-                        </div>
-                    </div>
-                    <div class="task">
-                        <div class="leftTaskPanel">
-                            <p>Task name</p>
-                            <div class="progressBar">
-                                <div class="filledProgressBar"></div>
-                            </div>
-                            <p class="progress"><green>100%</green></p>
-                            <div class="timeBar">
-                                <div class="filledTimeBar"></div>
-                            </div>
-                            <p class="timeLeft"><red>1 day</red></p>
-                        </div>
-                        
-                        <div class="rightTaskPanel">
-                            <a class="done-btn">Done</a>
-                        </div>
-                    </div>
-                    <div class="task">
-                        <div class="leftTaskPanel">
-                            <p>Task name</p>
-                            <div class="progressBar">
-                                <div class="filledProgressBar"></div>
-                            </div>
-                            <p class="progress"><green>100%</green></p>
-                            <div class="timeBar">
-                                <div class="filledTimeBar"></div>
-                            </div>
-                            <p class="timeLeft"><red>1 day</red></p>
-                        </div>
-                        
-                        <div class="rightTaskPanel">
-                            <a class="done-btn">Done</a>
-                        </div>
-                    </div>
-                    <div class="task">
-                        <div class="leftTaskPanel">
-                            <p>Task name</p>
-                            <div class="progressBar">
-                                <div class="filledProgressBar"></div>
-                            </div>
-                            <p class="progress"><green>100%</green></p>
-                            <div class="timeBar">
-                                <div class="filledTimeBar"></div>
-                            </div>
-                            <p class="timeLeft"><red>1 day</red></p>
-                        </div>
-                        
-                        <div class="rightTaskPanel">
-                            <a class="done-btn">Done</a>
-                        </div>
-                    </div>
+                <story-panel></story-panel>
+    
                 </div>
             </div>
         </content>

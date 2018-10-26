@@ -16,24 +16,24 @@
    
             <div class="container">
                 <div class="taskTracking">
-                    <div class="activeTasks">
+                    <div class="activeTasks" >
                         <center>
-                            <p>Active tasks</p>
-                            <p><blue>20</blue></p>
+                            <p>Active stories</p>
+                            <p><blue>{{activeStoryNumber(user.story)}}</blue></p>
                         </center>
                     </div>
 
                     <div class="tasksDone">
                         <center>
-                            <p>Tasks Done</p>
-                            <p><green>20</green></p>
+                            <p>Stories Done</p>
+                            <p><green>{{completedStoryNumber(user.story)}}</green></p>
                         </center>
                     </div>
 
                     <div class="criticalTasks">
                         <center>
-                            <p>Critical Tasks</p>
-                            <p><red>13:40:22</red></p>
+                            <p>Critical Story</p>
+                            <p><red>{{criticalStory(user.story)}}</red></p>
                         </center>
                     </div>   
                 </div>

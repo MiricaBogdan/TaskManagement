@@ -8,10 +8,17 @@
         <div class="timeBar">
             <div class="filledTimeBar"></div>
         </div>
-        <p class="timeLeft"><red>{{showRemaingingDays()}}</red></p>
+        <p class="timeLeft"><red>{{showRemaingingDays(story)}}</red></p>
     </div>
 
     <div class="rightStoryPanel">
         <a class="done-btn">Done</a>
     </div>
+    
+    <div class="taskPanel" ng-repeat="task in story.task" ng-show="hideAndShow">
+        <p>Task name: <blue>{{task.name}}</blue></p> 
+        <p>Time left: <red>{{showRemaingingDays(task)}}</red></p>
+        <p>Status: <green>{{checkIfCompleted(task)}}</green></p>
+    </div>
+    <center><input type="button" class="taskButton" value="{{buttonValue}}" ng-click="hideAndShow=!hideAndShow"></center>
 </div>

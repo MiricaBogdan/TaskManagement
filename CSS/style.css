@@ -220,6 +220,26 @@ p{
     cursor: pointer;
 }
 
+.taskPanel{
+    margin-top:15px;
+    display: block;
+    float: left;
+    width: 100%;
+    font-size:18px;
+    text-transform: none;
+    
+}
+
+.taskButton{
+    margin-top:5px;
+    height: auto;
+    width: 100%;
+    background-color:#182626;
+    border:none;
+    color:white;
+    cursor: pointer;
+}
+
 /* ##################### FOOTER ######################   */
 
 .footer{

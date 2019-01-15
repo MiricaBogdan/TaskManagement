@@ -1,0 +1,25 @@
+<div class="login-container" ng-controller="loginController">
+    <div class="login-panel">   
+        <center>  
+            <blue><h1>LOGIN</h1></blue>
+
+            <div class="form-inline">
+                <red><label for="name" style="padding-left: 25px"> Name :</label></red>
+                <input ng-model="name" type="name" class="form-control" id="name" />
+
+            </div>
+
+            <div class="form-inline">
+                <red><label for="password">Password:</label></red>
+                <input type="password" class="form-control" id="password" ng-model="password" />
+            </div>
+
+            <div class="checkbox">
+                <green><label><input type="checkbox"> Remember me</label></green>
+            </div>
+            {{user}}
+            <button type="button" id="loginBtn" class="login-btn" ng-click="loginFunction()">Login</button>
+
+        </center>
+    </div>     
+</div> 

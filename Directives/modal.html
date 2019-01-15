@@ -1,0 +1,104 @@
+<div class="form-fade" id="modal">
+    <!-- CREATE TASK -->
+    <div class="form" id="createTask" ng-if="modalState==1">
+        <div class="form-head">
+            <h1>Create tasks</h1>
+        </div>
+        <div class="form-body">
+
+            <div class="form-row">
+                <p class="form-row-name">Task name</p>
+                <input type="text" placeholder="Sensor name" ng-model="newTask.name" class="form-text-input full">
+            </div>
+            <div class="form-row">
+                <p class="form-row-name">Sensor measurement unit</p>
+                <input type="text" placeholder="Measurement unit"  ng-model="newSensor.measuredunit" class="form-text-input full">
+            </div>
+            <div class="form-row">
+                <p class="form-row-name">Sensor group</p>
+                <select class="form-select-input full" ng-options="sensorsGroup as sensorsGroup.name for sensorsGroup in sensorsGroups track by sensorsGroup.id" ng-model="newSensor.sensorsGroup">
+                    <option></option>
+                </select>
+            </div>
+            <div class="form-row">
+                <p class="form-row-name">Sensor location</p>
+                <div class="form-map full" id="createSensorMap"></div>
+            </div>
+            <div class="form-row">
+                <p class="form-row-name">Sensor output name</p>
+                <input type="text" placeholder="Sensor output name" ng-repeat="outputName in tempOutputNames" ng-model="newSensor.outputNames[outputName.id]" class="form-text-input full">
+
+                <input type="button" value="Add" ng-click="addOutputName()">
+            </div>
+        </div>
+        <div class="form-footer" ng-init="createFormMap('createSensorMap')">
+            <a class="form-button succes" ng-click="createSensor();hideModal()">Ok</a>
+            <div class="left" style="display: inline-block"></div>
+            <a class="form-button fail" ng-click="hideModal()">Cancel</a>
+        </div>
+    </div>
+    <!-- EDIT TASK -->
+    <div class="form" id="editTask" ng-if="modalState==2">
+        <div class="form-head">
+            <h1>Add New Sensor Group</h1>
+        </div>
+        <div class="form-body">
+
+            <div class="form-row">
+                <p class="form-row-name">Sensors group name</p>
+                <input type="text" placeholder="Sensor group name" ng-model="sensorsGroupDTO.name" class="form-text-input full">
+            </div>
+        </div>
+        <div class="form-footer">
+            <a class="form-button succes" ng-click="createSensorsGroup();hideModal()">Ok</a>
+            <div class="left" style="display: inline-block"></div>
+            <a class="form-button fail" ng-click="hideModal()">Cancel</a>
+        </div>
+    </div >
+    <!--  -->
+    <div class="form" ng-if="modalState==3">
+        <div class="form-head">
+            <h1>Create chart</h1>
+        </div>
+        <div class="form-body">
+
+            <div class="form-row">
+                <p class="form-row-name">Widget name</p>
+                <input type="text" class="form-text-input" ng-model="newChart.widgetName">
+            </div>
+            <div class="form-row">
+                <p class="form-row-name">Chart type</p>
+                <select class="form-select-input full" ng-options="chartType for chartType in chartTypes " ng-model="newChart.chartType">
+                </select>
+            </div>
+            <div class="form-row">
+                <p class="form-row-name">Interval</p>
+                <div class="half">
+                    <label>From</label>
+                    <input type="datetime-local" step="1" class="full" id="from" value="2001-02-02T00:00:00"  ng-model="time">
+
+                </div>
+                <div class="half">
+                    <label>To</label>
+                    <input type="datetime-local" class="full" id="to"  step="1" >
+                </div>
+            </div>
+            <div class="form-row">
+                <p class="form-row-name">Sensor</p>
+                <div ng-repeat="selectedOutput in selectedOutputNames| orderBy:'rowId'">
+                    <select class="form-select-input half" ng-options="userSensor.name for userSensor in userSensors" ng-model="selectedSensor[$index]">
+                    </select>
+                    <select ng-disabled="createChartItem.sensor" class="form-select-input half" ng-options="outputName.name for outputName in selectedSensor[$index].outputNames" ng-model="selectedOutputNames[$index]">
+                    </select>
+                </div>
+                <div><a class="add-button"  ng-click="createChart.addNewRow()"><i class="fas fa-plus-square"></i></a> </div>
+            </div>
+
+        </div>
+        <div class="form-footer">
+            <a class="form-button succes" ng-click="getDataForChart();hideModal()">Ok</a>
+            <div class="left" style="display: inline-block"></div>
+            <a class="form-button fail" ng-click="hideModal()">Cancel</a>
+        </div>
+    </div>
+</div>

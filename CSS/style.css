@@ -35,16 +35,45 @@ p{
 
 /* ##################### HEADER ######################   */
 .header{
-    height: 200px;
+    height: 240px;
     width:auto;
     margin: 0px;
     padding: 0px;
     background-color: black;
 }
 
+/* ##################### Content:login.html ######################   */
 
+.login-container{
+    background-color: #2c2c2c;
+    padding: 50px;
 
-/* ##################### Content ######################   */
+}
+
+.login-panel{
+    background-color: black;
+    margin: 0px;
+    padding: 60px 15px 100px 15px;
+}
+
+.form-inline{
+    padding: 5px;
+    font-size: 20px;
+}
+
+.login-btn{
+    margin-top: 10px;
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* ##################### Content:content.html ######################   */
 .container{
     background-color: #2c2c2c;
     padding-top:20px;
@@ -128,11 +157,11 @@ p{
 }
 
 .topMenuBtnFocused-js{
-     background-color: #0b0b4a;
+    background-color: #0b0b4a;
 }
 
 /* ##################### Content-task ######################   */
-.story{
+.project{
     background-color: black;
     height: auto;
     width: calc(100% - 40px);
@@ -142,7 +171,7 @@ p{
     padding: 10px;
 }
 
-.leftStoryPanel{
+.leftProjectPanel{
     display: inline-block;
     width: 60%;
     float:left;
@@ -227,7 +256,7 @@ p{
     width: 100%;
     font-size:18px;
     text-transform: none;
-    
+
 }
 
 .taskButton{
@@ -240,15 +269,6 @@ p{
     cursor: pointer;
 }
 
-/* ##################### FOOTER ######################   */
-
-.footer{
-    height: 200px;
-    width:auto;
-    margin: 0px;
-    padding: 0px;
-    background-color: black;
-}
 
 blue{
     color: var(--blue);
@@ -260,4 +280,11 @@ green{
 
 red{
     color:var(--red);
+}
+
+.left{
+    float: left;
+}
+.right{
+    float:right;
 }

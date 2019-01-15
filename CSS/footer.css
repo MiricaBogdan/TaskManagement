@@ -1,0 +1,26 @@
+/* ##################### FOOTER ######################   */
+
+.footer{
+    height: 200px;
+    width:auto;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+.footerLeftPanel{
+    display: inline-block;
+    padding: 30px 0px 0px 150px;
+    font-size: 25px;
+}
+
+.footerCenterPanel{
+    display: inline-block;
+    padding: 30px 0px 0px 100px;
+    font-size: 25px;
+}
+
+.footerRightPanel{
+    display: inline-block;
+    padding: 30px 0px 0px 100px;
+    font-size: 25px;

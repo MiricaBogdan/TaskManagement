@@ -1,0 +1,37 @@
+<div class="container" ng-controller="taskController">
+    <div class="taskTracking">
+        <div class="activeTasks" >
+            <center>
+                <p>Active Projects</p>
+                <p><blue>{{activeProjectNumber(user.project)}}</blue></p>
+            </center>
+        </div>
+
+        <div class="tasksDone">
+            <center>
+                <p>Projects Done</p>
+                <p><green>{{completedProjectNumber(user.project)}}</green></p>
+            </center>
+        </div>
+
+        <div class="criticalTasks">
+            <center>
+                <p>Critical Project</p>
+                <p><red>{{criticalProject(user.project)}}</red></p>
+            </center>
+        </div>   
+    </div>
+
+    <div class=taskDetails>
+        <div>
+            <ul>
+                <li><center><a class="topMenuBtn topMenuBtnFocused-js" ng-click="taskDashboardFunction()">Task Dashboard</a></center></li>   
+                <li><center><a class="topMenuBtn" ng-click="taskManagementFunction()">Task Management</a></center></li>
+            </ul>
+        </div>
+
+        <project-panel></project-panel>
+        <project-diagram></project-diagram>
+        
+    </div>
+</div>

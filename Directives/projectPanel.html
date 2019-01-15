@@ -1,0 +1,26 @@
+<div class="project" ng-repeat="project in user.project" ng-show="taskDashboard">
+    <div class="leftProjectPanel">
+        <p>{{project.name}}</p>
+        <div class="progressBar">
+            <div class="filledProgressBar"></div>
+        </div>
+        <p class="progress"><green>100%</green></p>
+        <div class="timeBar">
+            <div class="filledTimeBar"></div>
+        </div>
+        <p class="timeLeft"><red>{{showRemaingingDays(project)}}</red></p>
+    </div>
+
+    <div class="rightProjectPanel">
+        <a class="done-btn">Done</a>
+    </div>
+
+    <div class="taskPanel" ng-repeat="task in project.task" ng-show="project.showTasks">
+        <p>Task name: <blue>{{task.name}}</blue></p> 
+        <p>Time left: <red>{{showRemaingingDays(task)}}</red></p>
+        <p>Status: <green>{{checkIfCompleted(task)}}</green>
+            <input ng-model="checkbox" type="checkbox" ng-click="checkboxFunction(task)">
+        </p>
+    </div>
+    <center><input type="button" class="taskButton" value="Show the Tasks" ng-click="showAndHideTasks(project,$event)"></center>
+</div>

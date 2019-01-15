@@ -2,58 +2,23 @@
     <head>
         <title>TimeManagementApp</title>
         <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <link rel="stylesheet" type="text/css" href="FontAwesome/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="CSS/header.css">
+        <link rel="stylesheet" type="text/css" href="CSS/footer.css">
+        <link rel="stylesheet" type="text/css" href="CSS/modal.css">
         <script src="External/angular/angular.min.js"></script>
-        <script src="JS/main.js"></script>
+        <script src="External/angular-route/angular-route.min.js"></script>
+        <script src="JS/main.js"></script> 
     </head>
 
-    <body ng-app="timeManagementApp" ng-controller="myCtrl">
+    <body ng-app="timeManagementApp">
         <header>
-            <div class="header">
-            </div>
         </header>
- 
-        <content>
-   
-            <div class="container">
-                <div class="taskTracking">
-                    <div class="activeTasks" >
-                        <center>
-                            <p>Active stories</p>
-                            <p><blue>{{activeStoryNumber(user.story)}}</blue></p>
-                        </center>
-                    </div>
 
-                    <div class="tasksDone">
-                        <center>
-                            <p>Stories Done</p>
-                            <p><green>{{completedStoryNumber(user.story)}}</green></p>
-                        </center>
-                    </div>
-
-                    <div class="criticalTasks">
-                        <center>
-                            <p>Critical Story</p>
-                            <p><red>{{criticalStory(user.story)}}</red></p>
-                        </center>
-                    </div>   
-                </div>
-
-                <div class=taskDetails>
-                    <div>
-                        <ul>
-                            <li><center><a class="topMenuBtn topMenuBtnFocused-js">Task Dashboard</a></center></li>   
-                            <li><center><a class="topMenuBtn">Task Management</a></center></li>
-                        </ul>
-                    </div>
-
-                <story-panel></story-panel>
-    
-                </div>
-            </div>
+        <content ng-view>
         </content>
 
         <footer>
-            <diV class="footer"></diV>
         </footer>
 
     </body>

@@ -1,12 +1,14 @@
-<div id="header">
+<div id="header" ng-controller="loginController">
     <span>
-        <a href="#/home">
-            <img src="../Images/LogoTest.png" >
+        <a href="#/tasks">
+            <img src="./Images/logo.png" >
         </a>
     </span>
     <ul>
-        <li class="left"><a href="#/home">Home</a></li>
-        <li class="left"><a href="#/tasks">Tasks</a></li>
-        <li class="right"><a href="#/login">Login</a></li>
+        <li class="left"><a href="#/projects" ng-show="checkUserLogin()">Projects</a></li>
+        <li class="left"><a href="#/diagrams" ng-show="checkUserLogin()">Diagrams</a></li>
+        <li class="right"><a href="#/login" ng-show="!checkUserLogin()">Login</a></li>
+        <li class="right"><a href="#/login" ng-show="checkUserLogin()" ng-click="logout()">Logout</a></li>
+        <li class="right" ng-show="checkUserLogin()">Welcome, {{user.name}}</li>
     </ul>
 </div>
